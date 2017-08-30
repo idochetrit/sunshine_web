@@ -1,14 +1,14 @@
-defmodule SunshineWebWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :sunshine_web
+defmodule SunshineWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :sunshine
 
-  socket "/socket", SunshineWebWeb.UserSocket
+  socket "/socket", SunshineWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :sunshine_web, gzip: false,
+    at: "/", from: :sunshine, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,10 +35,10 @@ defmodule SunshineWebWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_sunshine_web_key",
+    key: "_sunshine_key",
     signing_salt: "IQ1k5OGv"
 
-  plug SunshineWebWeb.Router
+  plug SunshineWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

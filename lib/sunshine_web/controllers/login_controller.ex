@@ -1,5 +1,5 @@
-defmodule SunshineWebWeb.LoginController do
-  use SunshineWebWeb, :controller
+defmodule SunshineWeb.LoginController do
+  use SunshineWeb, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

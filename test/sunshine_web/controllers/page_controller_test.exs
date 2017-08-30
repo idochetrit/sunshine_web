@@ -1,5 +1,5 @@
-defmodule SunshineWebWeb.PageControllerTest do
-  use SunshineWebWeb.ConnCase
+defmodule SunshineWeb.PageControllerTest do
+  use SunshineWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

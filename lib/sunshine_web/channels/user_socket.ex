@@ -1,8 +1,8 @@
-defmodule SunshineWebWeb.UserSocket do
+defmodule SunshineWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SunshineWebWeb.RoomChannel
+  # channel "room:*", SunshineWeb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -30,7 +30,7 @@ defmodule SunshineWebWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     SunshineWebWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     SunshineWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

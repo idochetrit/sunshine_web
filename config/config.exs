@@ -6,11 +6,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :sunshine_web, SunshineWebWeb.Endpoint,
+config :sunshine, SunshineWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "4KtLbPhCor/f+GM8GJ/PKI48shr8nMnVQ03IBK0OIOkq3FHE1rosmBcioZXvhXNC",
-  render_errors: [view: SunshineWebWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: SunshineWeb.PubSub,
+  render_errors: [view: SunshineWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Sunshine.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

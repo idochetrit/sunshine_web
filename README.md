@@ -1,4 +1,4 @@
-# SunshineWeb
+# Sunshine
 
 To start your Phoenix server:
 

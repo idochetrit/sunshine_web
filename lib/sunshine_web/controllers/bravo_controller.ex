@@ -1,5 +1,5 @@
-defmodule SunshineWebWeb.BravoController do
-  use SunshineWebWeb, :controller
+defmodule SunshineWeb.BravoController do
+  use SunshineWeb, :controller
 
   def index(conn, _params) do
     case conn |> User.logged_in? do

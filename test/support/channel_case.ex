@@ -1,4 +1,4 @@
-defmodule SunshineWebWeb.ChannelCase do
+defmodule SunshineWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,7 +21,7 @@ defmodule SunshineWebWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint SunshineWebWeb.Endpoint
+      @endpoint SunshineWeb.Endpoint
     end
   end
 

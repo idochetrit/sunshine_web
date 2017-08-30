@@ -1,5 +1,5 @@
-defmodule SunshineWebWeb.ErrorView do
-  use SunshineWebWeb, :view
+defmodule SunshineWeb.ErrorView do
+  use SunshineWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

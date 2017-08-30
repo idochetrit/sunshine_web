@@ -1,4 +1,4 @@
-defmodule SunshineWebWeb.ErrorHelpers do
+defmodule SunshineWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule SunshineWebWeb.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(SunshineWebWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(SunshineWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(SunshineWebWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(SunshineWeb.Gettext, "errors", msg, opts)
     end
   end
 end

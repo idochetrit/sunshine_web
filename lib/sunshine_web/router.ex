@@ -1,5 +1,5 @@
-defmodule SunshineWebWeb.Router do
-  use SunshineWebWeb, :router
+defmodule SunshineWeb.Router do
+  use SunshineWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule SunshineWebWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", SunshineWebWeb do
+  scope "/", SunshineWeb do
     pipe_through :browser # Use the default browser stack
 
     resources "/", LoginController, only: [:index, :create]
@@ -21,7 +21,7 @@ defmodule SunshineWebWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", SunshineWebWeb do
+  # scope "/api", SunshineWeb do
   #   pipe_through :api
   # end
 end
