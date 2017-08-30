@@ -10,6 +10,7 @@ defmodule Sunshine.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(SunshineWeb.Endpoint, []),
+      worker(Sunshine.Repo, []),
       # Start your own worker by calling: Sunshine.Worker.start_link(arg1, arg2, arg3)
       # worker(Sunshine.Worker, [arg1, arg2, arg3]),
     ]

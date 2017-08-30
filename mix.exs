@@ -19,7 +19,7 @@ defmodule Sunshine.Mixfile do
   def application do
     [
       mod: {Sunshine.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ecto, :postgrex]
     ]
   end
 
@@ -37,7 +37,10 @@ defmodule Sunshine.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:ecto, "~> 2.2"},
+      {:postgrex, "~> 0.13.3"},
+      {:cowboy, "~> 1.0"},
+      {:exfmt, [github: "lpil/exfmt"]}
     ]
   end
 end

@@ -6,15 +6,16 @@ defmodule SunshineWeb.LoginController do
   end
 
   def create(conn, params) do
-    case User.login(params, Blog.Repo) do
+    case Sunshine.User.login(params["login"]) do
       {:ok, user} ->
         conn
         |> put_session(:current_user, user)
         |> put_flash(:info, "Logged in")
         |> redirect(to: "/bravo")
+
       :error ->
         conn
-        |> put_flash(:info, "Wrong email or password")
+        |> put_flash(:error, "Wrong! Bitch!")
         |> render("index.html")
     end
   end

@@ -1,6 +1,6 @@
 <h2>Login</h2>
 
-<%= form_for @conn, login_path(@conn, :create), [name: :login], fn f -> %>
+<%= form_for @conn, login_path(@conn, :create), [as: :login], fn f -> %>
   <div class="form-group">
     <label>User Name</label>
     <%= text_input f, :username, class: "form-control" %>
@@ -14,4 +14,11 @@
   <div class="form-group">
     <%= submit "Login", class: "btn btn-primary" %>
   </div>
+
+  <%
+    error = get_flash(@conn, :error)
+  %>
+  <%= if error do %>
+    <div class="alert alert-danger" role="alert"><%= error %></div>
+  <% end %>
 <% end %>

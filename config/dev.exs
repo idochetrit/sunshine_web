@@ -46,3 +46,13 @@ config :logger, :console, format: "[$level] $message\n"
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
+
+
+config :sunshine, Sunshine.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "sunshine_dev",
+  username: "sunshine",
+  password: "sunshine"
+
+
+config :sunshine, ecto_repos: [Sunshine.Repo]
