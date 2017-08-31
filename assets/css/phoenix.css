@@ -1,4 +1,4 @@
-/* This file is for your main application css. *//* Includes Bootstrap as well as some default style for the starter
+/* Includes Bootstrap as well as some default style for the starter
  * application. This can be safely deleted to start fresh.
  */
 
@@ -26,7 +26,7 @@ body, form, ul, table {
   height: 71px;
   display: inline-block;
   margin-bottom: 1em;
-  background-image: url("/images/phoenix-5bd99a0d17dd41bc9d9bf6840abcc089.png?vsn=d");
+  background-image: url("/images/phoenix.png");
   background-size: 519px 71px;
 }
 
