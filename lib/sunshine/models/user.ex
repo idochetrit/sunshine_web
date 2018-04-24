@@ -5,38 +5,43 @@ defmodule Sunshine.User do
     Plug.Conn.get_session conn, :current_user
   end
 
-
   def logged_in?(conn) do
     !!(current_user(conn))
   end
 
-
   def login(params) do
-    user = params["username"] |> String.downcase
-    user =
-      case user do
-        "liordizdar" ->
-          user
-        _ ->
-          nil
-      end
-    case authenticate(user, params["password"]) do
+    case authenticate_login_pass(params["password"]) do
       true ->
-        {:ok, user}
+        {:ok, "user1"}
+      _ ->
+        :error
+    end
+  end
+
+  def solve_net_error(params) do
+    case authenticate_net_error(params["password"]) do
+      true ->
+        {:ok, "userFinal"}
       _ ->
         :error
     end
   end
 
 
-  defp authenticate(user, password) do
+  defp authenticate_net_error(password) do
     password_check =
-      :crypto.hash(:sha256, "whatever") |> Base.encode16 |> String.downcase
+      :crypto.hash(:sha256, "6245") |> Base.encode16 |> String.downcase
     encrypted_password =
       :crypto.hash(:sha256, password) |> Base.encode16 |> String.downcase
-    case user do
-      nil -> false
-      _ -> (encrypted_password == password_check)
-    end
+    (encrypted_password == password_check)
+  end
+
+
+  defp authenticate_login_pass(password) do
+    password_check =
+      :crypto.hash(:sha256, "ATGC") |> Base.encode16 |> String.downcase
+    encrypted_password =
+      :crypto.hash(:sha256, password) |> Base.encode16 |> String.downcase
+    (encrypted_password == password_check)
   end
 end

@@ -17,6 +17,7 @@ defmodule SunshineWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     resources "/", LoginController, only: [:index, :create]
+    resources "/net_error", NetworkErrorCodeController, only: [:index, :create]
     get "/bravo", BravoController, :index
   end
 

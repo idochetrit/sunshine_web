@@ -1,0 +1,21 @@
+<h2>Network Error</h2>
+
+<h4>Please enter the access code to retry connection...</h4>
+<%= form_for @conn, network_error_code_path(@conn, :create), [as: :login], fn f -> %>
+
+  <div class="form-group">
+    <label>Code</label>
+    <%= password_input f, :password, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Enter", class: "btn btn-primary" %>
+  </div>
+
+  <%
+    error = get_flash(@conn, :error)
+  %>
+  <%= if error do %>
+    <div class="alert alert-danger" role="alert"><%= error %></div>
+  <% end %>
+<% end %>
