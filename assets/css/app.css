@@ -1,1 +1,7 @@
 /* This file is for your main application css. */
+.container {
+  background-color: #f3f3f3;
+  height: 550px;
+  border-radius: 5px;
+  padding: 15px;
+}
