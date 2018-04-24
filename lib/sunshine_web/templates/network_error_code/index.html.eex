@@ -4,12 +4,12 @@
 <%= form_for @conn, network_error_code_path(@conn, :create), [as: :login], fn f -> %>
 
   <div class="form-group">
-    <label>Code</label>
+    <label>Access Code</label>
     <%= password_input f, :password, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= submit "Enter", class: "btn btn-primary" %>
+    <%= submit "Send To HQ", class: "btn btn-primary" %>
   </div>
 
   <%

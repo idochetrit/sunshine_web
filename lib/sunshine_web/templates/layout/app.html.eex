@@ -7,14 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Sunshine!</title>
+    <title>Genetic Remote Mailer | Global Medical DWH</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
     <div class="container">
       <header class="header">
-        <span>Welcome :P</span>
+        <span>Welcome to Global Medical DWH</span>
       </header>
 
       <main role="main">

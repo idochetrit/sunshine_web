@@ -8,7 +8,7 @@
   </div>
 
   <div class="form-group">
-    <%= submit "Send To HQ", class: "btn btn-primary" %>
+    <%= submit "Test Antidote Sequence", class: "btn btn-primary" %>
   </div>
 
   <%
