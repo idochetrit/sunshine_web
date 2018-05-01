@@ -12,16 +12,15 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-        <span>Welcome to Global Medical DWH</span>
-      </header>
+    <div class="wrapper">
+      <div class="container">
 
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
+        <main role="main">
+          <%= render @view_module, @view_template, assigns %>
+        </main>
 
-    </div> <!-- /container -->
+      </div> <!-- /container -->
+    </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

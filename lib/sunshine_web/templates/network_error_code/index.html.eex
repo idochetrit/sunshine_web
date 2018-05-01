@@ -1,6 +1,16 @@
-<h2>Network Error</h2>
+<h2>Genetic Sequence Correct!</h2>
+<h3>You're all healed, you're not longer infected!</h3>
+<br />
+<hr style="background-scolor: #0f0f0f;"/>
+<br />
+<h2>Network Blocked</h2>
+<h4>Please enter the access code to send the sequence:</h4>
 
-<h4>Please enter the access code to retry connection...</h4>
+<div style="text-align: center;" >
+  <h3>:מפתח לצופן</h3>
+  <img src="<%= static_path(@conn, "/images/code.jpg") %>" 
+        style="height: 50%; width: 50%;"/>
+</div>
 <%= form_for @conn, network_error_code_path(@conn, :create), [as: :login], fn f -> %>
 
   <div class="form-group">
@@ -9,13 +19,14 @@
   </div>
 
   <div class="form-group">
-    <%= submit "Send To HQ", class: "btn btn-primary" %>
+    <%= submit "Send To HQ", class: "btn bt-large btn-primary" %>
   </div>
 
   <%
     error = get_flash(@conn, :error)
   %>
   <%= if error do %>
-    <div class="alert alert-danger" role="alert"><%= error %></div>
+    <div class="alert alert-danger" 
+      role="alert"><%= error %></div>
   <% end %>
 <% end %>

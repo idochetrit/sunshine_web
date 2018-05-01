@@ -1,9 +1,26 @@
 /* This file is for your main application css. */
 .container {
-  background-color: #f3f3f3;
-  height: 550px;
+  border: 1px #4BC355 solid;
+  height: 80%;
   border-radius: 5px;
   padding: 15px;
+  padding-bottom: 20px;
+}
+
+
+.wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  color: #4BC355;
+}
+
+body {
+  background-color: #212121 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 /* Includes Bootstrap as well as some default style for the starter
  * application. This can be safely deleted to start fresh.

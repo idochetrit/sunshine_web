@@ -29,11 +29,14 @@ defmodule Sunshine.User do
 
 
   defp authenticate_net_error(password) do
-    password_check =
-      :crypto.hash(:sha256, "6245") |> Base.encode16 |> String.downcase
+    password_check_en =
+      :crypto.hash(:sha256, "anchor") |> Base.encode16 |> String.downcase
+    password_check_he =
+      :crypto.hash(:sha256, "עוגן") |> Base.encode16 |> String.downcase
     encrypted_password =
       :crypto.hash(:sha256, password) |> Base.encode16 |> String.downcase
-    (encrypted_password == password_check)
+    (encrypted_password == password_check_en) ||
+      (encrypted_password == password_check_he)
   end
 
 
